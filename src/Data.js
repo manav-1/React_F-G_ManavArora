@@ -26,7 +26,7 @@ function Form() {
       <center>
         <h1>Form Data</h1>
       </center>
-      <table {...getTableProps()} style={{ border: "solid 1px blue" }}>
+      <table {...getTableProps()} style={{ border: "solid 1px #212121" }}>
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
@@ -34,9 +34,9 @@ function Form() {
                 <th
                   {...column.getHeaderProps()}
                   style={{
-                    borderBottom: "solid 2px red",
-                    background: "aliceblue",
-                    color: "black",
+                    borderBottom: "0.15rem solid #212121",
+                    background: "#6D9886",
+                    color: "#212121",
                     fontWeight: "bold",
                   }}
                 >
@@ -58,9 +58,9 @@ function Form() {
                     <td
                       {...cell.getCellProps()}
                       style={{
-                        padding: "10px",
+                        padding: "0.8rem",
                         border: "solid 1px gray",
-                        background: "rgba(100,100,100,0.5)",
+                        background: "#F6F6F6",
                       }}
                     >
                       {cell.render("Cell")}
