@@ -60,22 +60,24 @@ function Form() {
       setSnackBarType("warning");
       return;
     }
-    var obj = {
-      name,
-      email,
-      phone,
-      quality,
-      qualityBev,
-      clean,
-      overAll,
-    };
+    setName("");
+    setEmail("");
+    setPhone("");
     try {
       if (localStorage.getItem("form-data")) {
         localStorage.setItem(
           "form-data",
           JSON.stringify([
             ...JSON.parse(localStorage.getItem("form-data")),
-            obj,
+            {
+              name,
+              email,
+              phone,
+              quality,
+              qualityBev,
+              clean,
+              overAll,
+            },
           ])
         );
         setSnackBarVisible(true);
@@ -83,7 +85,20 @@ function Form() {
         setSnackBarType("success");
         return;
       } else {
-        localStorage.setItem("form-data", JSON.stringify([obj]));
+        localStorage.setItem(
+          "form-data",
+          JSON.stringify([
+            {
+              name,
+              email,
+              phone,
+              quality,
+              qualityBev,
+              clean,
+              overAll,
+            },
+          ])
+        );
       }
     } catch {
       setSnackBarVisible(true);
