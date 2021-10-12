@@ -60,9 +60,7 @@ function Form() {
       setSnackBarType("warning");
       return;
     }
-    setName("");
-    setEmail("");
-    setPhone("");
+
     try {
       if (localStorage.getItem("form-data")) {
         localStorage.setItem(
@@ -105,6 +103,9 @@ function Form() {
       setSnackBarText("Something went wrong please try again");
       setSnackBarType("error");
     }
+    setName("");
+    setEmail("");
+    setPhone("");
   }
   return (
     <div className="form-container">
