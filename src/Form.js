@@ -5,9 +5,9 @@ import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 
 function Form() {
-  const [name, setName] = useState("34534543");
-  const [email, setEmail] = useState("random@gmail.com");
-  const [phone, setPhone] = useState("5656565656");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [quality, setQuality] = useState("excellent");
   const [qualityBev, setQualityBev] = useState("excellent");
   const [clean, setClean] = useState("excellent");
